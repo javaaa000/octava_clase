@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javiera Valdebenito - Diseñadora Integral</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Javiera Valdebenito</h1>
+            <p>Diseñadora Integral</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html" >Portafolio</a>
+            <a href="about.html" class="active">Sobre mí</a>
+        </nav>
+
+        <p style="color: white;"> Hola!! Soy Javiera, me dicen Javi o Java, tengo 21 años y mis principales áreas del diseño desarrolladas son Gráfico, UX, Industrial y Packaging. Me gusta desarrollar diseños interactivos y divertidos de utilizar.
+
+        En el siguiente gráfico pueden ver la cantidad de proyectos que he realizado a lo largo de la carrera divididos en semestres que he y esté cursando hasta el momento. (no me acuerdo del numero exacto, son un aproximado)</p>
+
+        <canvas id="aqui"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            new Chart("aqui", {
+                type: "line",
+                data: {
+                    labels: ["Semestre 1 ", "Semestre 2", "Semestre 3 ", "Semestre 4", "Semestre 5", "Semestre 6"],
+                    datasets: [
+                        {
+                            label: "Proyectos",
+                            data: [3, 5, 2, 3, 2, 4 ],
+                            borderWidth: 2,
+                            borderColor:"white"
+                        },
+                    ],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        </script>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Javiera Valdebenito. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/jabitakora/">Instagram</a>
+                <a href="www.linkedin.com/in/javiera-valdebenito-045803289">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+    <script src="portafolio.js"></script>
+</body>
+</html>
